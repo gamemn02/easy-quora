@@ -2,7 +2,13 @@
     "name": "Easy Quora",
     "version": "1.0",
     "description": "An Extension to ease Quora.com navigation",
-    "permissions": ["declarativeContent"],
+    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "content_scripts": [
+        {
+            "matches": ["*://ar.quora.com/*"],
+            "js": ["contentscript.js"]
+        }
+    ],
     "background": {
         "scripts": ["background.js"],
         "persistent": false
