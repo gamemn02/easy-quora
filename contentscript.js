@@ -1,4 +1,3 @@
-
 var currentUrl = location.href
 console.log('current url: ' + currentUrl);
 chrome.storage.sync.get(['seen-qsts-list'], function(data) {
